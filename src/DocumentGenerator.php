@@ -3,7 +3,8 @@
 namespace App;
 
 
-use App\model\AbstractElement;
+use App\Model\AbstractElement;
+use ReflectionException;
 
 class DocumentGenerator
 {
@@ -32,10 +33,14 @@ class DocumentGenerator
 
     /**
      * @return void
+     * @throws ReflectionException
      */
     public function render(): void {
         foreach ($this->stack as $element) {
-           echo $element->render();
+            // Use protected function for avoid render() listing in auto-completion
+            $reflectionMethod = new \ReflectionMethod(get_class($element), 'render');
+            $reflectionMethod->setAccessible(true);
+            echo $reflectionMethod->invoke($element);
         }
     }
 

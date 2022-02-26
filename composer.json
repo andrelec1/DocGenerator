@@ -1,22 +1,23 @@
 {
-    "name": "andrelec1/docgenerator",
-    "description": "latext concurrent",
-    "version": "1.0.0",
-    "require": {
-        "php": "8.1"
-    },
-    "type": "library",
-    "autoload": {
-        "psr-4": {
-            "App\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Andrelec1"
-        }
-    ],
-    "require-dev": {
-        "symfony/var-dumper": "^6.0"
+  "name": "andrelec1/docgenerator",
+  "description": "latext concurrent",
+  "version": "1.0.3",
+  "require": {
+    "php": "^8.1",
+    "symfony/options-resolver": "^6.0"
+  },
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "Andrelec1"
+    }
+  ],
+  "require-dev": {
+    "symfony/var-dumper": "^6.0"
+  }
 }
