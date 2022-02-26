@@ -6,10 +6,11 @@ use App\Model\AbstractElement;
 use App\Properties\StyleProperties\HasTextAlign;
 use App\Properties\StyleProperties\HasTextColor;
 use App\Properties\HasTitleSize;
+use App\Properties\StyleProperties\HasTextDecoration;
 
 class TitleElement extends AbstractElement
 {
-    use HasTextAlign, HasTextColor, HasTitleSize;
+    use HasTextAlign, HasTextColor, HasTitleSize, HasTextDecoration;
 
     /**
      * @return array
@@ -19,6 +20,7 @@ class TitleElement extends AbstractElement
         return [
             $this->getTextAlignStyle(),
             $this->getTextColorStyle(),
+            $this->getDecorationStyle(),
         ];
     }
 
