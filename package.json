@@ -1,0 +1,34 @@
+{
+  "name": "docgenerator",
+  "version": "1.0.0",
+  "description": "document generator",
+  "main": " ",
+  "scripts": {
+    "build-inc": "node_modules/.bin/vik patch",
+    "build-tag": "(node -p \"require('./package.json').version\" | xargs git tag) && git push --tags",
+    "build-bump": "npm run build-inc && git add . && git commit -m '⬆️Version Bump' && npm run build-tag && git push --follow-tags",
+    "dc-up": "docker-compose up --build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrelec1/DocGenerator.git"
+  },
+  "author": "Andrelec1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrelec1/DocGenerator/issues"
+  },
+  "devDependencies": {
+    "vik": "git+https://github.com/andrelec1/vik.git",
+    "cz-customizable": "^6.3.0",
+    "grunt": "^1.4.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.js"
+    }
+  }
+}
