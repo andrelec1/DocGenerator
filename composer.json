@@ -3,8 +3,7 @@
   "description": "latext concurrent",
   "version": "1.0.3",
   "require": {
-    "php": "^8.1",
-    "symfony/options-resolver": "^6.0"
+    "php": "^8.1"
   },
   "type": "library",
   "autoload": {
