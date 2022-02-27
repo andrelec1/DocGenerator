@@ -2,7 +2,7 @@
 
 Simple document generator.
 
-Generate simple doc with simple code like: 
+Generate simple doc with simple code like:
 
 ````php
 <?php
