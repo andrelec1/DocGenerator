@@ -19,9 +19,9 @@
     "url": "https://github.com/andrelec1/DocGenerator/issues"
   },
   "devDependencies": {
-    "vik": "git+https://github.com/andrelec1/vik.git",
     "cz-customizable": "^6.3.0",
-    "grunt": "^1.4.0"
+    "grunt": "^1.4.0",
+    "vik": "git+https://github.com/andrelec1/vik.git"
   },
   "config": {
     "commitizen": {
