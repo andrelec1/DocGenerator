@@ -1,11 +1,11 @@
 {
   "name": "andrelec1/docgenerator",
+  "type": "library",
   "description": "latext concurrent",
   "version": "1.0.3",
   "require": {
     "php": "^8.1"
   },
-  "type": "library",
   "autoload": {
     "psr-4": {
       "App\\": "src/"

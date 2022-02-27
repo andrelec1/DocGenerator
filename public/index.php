@@ -8,6 +8,7 @@ use App\Enum\TextDecoration;
 use App\Enum\TitleSize;
 use App\Model\Code\PHPCodeElement;
 use App\Model\List\SimpleListElement;
+use App\Model\Text\SimpleTextElement;
 use App\Model\Title\TitleElement;
 
 require dirname(__DIR__).'/vendor/autoload.php';
@@ -46,7 +47,7 @@ $document->addElement((new TitleElement('TitleElement'))
     ->textDecorationStyle(TextDecoration::UNDERLINE)
     ->addContentModifier($paginationModel)
 );
-
+$document->addElement((new SimpleTextElement('Adding \'TitleElement\' to your document.')));
 $document->addElement((new PHPCodeElement('$document->addElement((new TitleElement(\'Doc Generator\'))'))
     ->align(Align::LEFT)
 );
