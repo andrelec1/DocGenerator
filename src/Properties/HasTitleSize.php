@@ -4,7 +4,7 @@ namespace App\Properties;
 
 
 use App\Enum\TitleSize;
-use App\Model\Title\TitleElement;
+use App\Model\Title\TitleContentModifier;
 
 trait HasTitleSize
 {
@@ -15,7 +15,7 @@ trait HasTitleSize
 
     /**
      * @param TitleSize $size
-     * @return HasTitleSize|TitleElement
+     * @return HasTitleSize|TitleContentModifier
      */
     public function titleSize(TitleSize $size = TitleSize::H1): self
     {

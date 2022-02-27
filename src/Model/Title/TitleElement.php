@@ -24,9 +24,7 @@ class TitleElement extends AbstractElement
         ];
     }
 
-    /**
-     * @var string
-     */
+    /** @var string  */
     private string $title;
 
     /**

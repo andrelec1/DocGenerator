@@ -1,8 +1,10 @@
 <?php
 
+use App\ContentModifier\PaginationModifier;
 use App\DocumentGenerator;
 use App\Enum\TextAlign;
 use App\Enum\TextDecoration;
+use App\Enum\TitleSize;
 use App\Model\Title\TitleElement;
 
 require dirname(__DIR__).'/vendor/autoload.php';
@@ -14,6 +16,18 @@ $document->addElement((new TitleElement('Doc Generator'))
     ->textDecorationStyle(TextDecoration::UNDERLINE_WAVY)
 );
 
+$paginationMainMenu = new PaginationModifier();
 
+$document->addElement((new TitleElement('Presentation'))
+    ->titleSize(TitleSize::H2)
+    ->textDecorationStyle(TextDecoration::UNDERLINE)
+    ->addContentModifier($paginationMainMenu)
+);
+
+$document->addElement((new TitleElement('Utilisation'))
+    ->titleSize(TitleSize::H2)
+    ->textDecorationStyle(TextDecoration::UNDERLINE)
+    ->addContentModifier($paginationMainMenu)
+);
 
 $document->render();
