@@ -2,35 +2,29 @@
 
 namespace App\Model\Title;
 
-use App\Enum\TitleSize;
 use App\Model\AbstractElement;
 use App\Properties\StyleProperties\HasTextAlign;
 use App\Properties\StyleProperties\HasTextColor;
 use App\Properties\HasTitleSize;
+use App\Properties\StyleProperties\HasTextDecoration;
 
 class TitleElement extends AbstractElement
 {
-    use HasTextAlign, HasTextColor, HasTitleSize;
+    use HasTextAlign, HasTextColor, HasTitleSize, HasTextDecoration;
 
     /**
      * @return array
      */
     protected function getStyle(): array
     {
-//        $reflexion = new \ReflectionClass($this);
-//        dump($reflexion);
-//        die;
-
         return [
             $this->getTextAlignStyle(),
             $this->getTextColorStyle(),
+            $this->getDecorationStyle(),
         ];
     }
 
-
-    /**
-     * @var string
-     */
+    /** @var string  */
     private string $title;
 
     /**
@@ -40,7 +34,6 @@ class TitleElement extends AbstractElement
     {
         $this->title = $title;
     }
-
 
     /**
      * @return string

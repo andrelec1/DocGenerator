@@ -4,6 +4,8 @@ namespace App\Enum;
 
 enum TextColor: string
 {
+    case DEFAULT = 'default';
+    case NONE = 'none';
     case BLACK = 'black';
     case SILVER = 'silver';
     case GRAY = 'gray';

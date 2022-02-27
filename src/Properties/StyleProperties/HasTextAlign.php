@@ -11,7 +11,7 @@ trait HasTextAlign
 
     /**
      * @param TextAlign $textAlign
-     * @return HasTextAlign|\App\Model\Title\TitleElement
+     * @return $this
      */
     public function textAlign(TextAlign $textAlign = TextAlign::LEFT): self
     {

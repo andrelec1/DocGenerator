@@ -1,9 +1,10 @@
 <?php
 
+use App\ContentModifier\PaginationModifier;
 use App\DocumentGenerator;
 use App\Enum\Align;
 use App\Enum\TextAlign;
-use App\Enum\TextColor;
+use App\Enum\TextDecoration;
 use App\Enum\TitleSize;
 use App\Model\Code\PHPCodeElement;
 use App\Model\Title\TitleElement;
@@ -12,16 +13,19 @@ require dirname(__DIR__).'/vendor/autoload.php';
 
 $document = new DocumentGenerator();
 
-$document->addElement(new TitleElement('Best Title of the world !!!!'));
-$document->addElement((new TitleElement('Best SubTitle of the world !!!!'))
-    ->titleSize(TitleSize::H2)
+$document->addElement((new TitleElement('Doc Generator'))
+    ->textAlign(TextAlign::CENTER)
+    ->textDecorationStyle(TextDecoration::UNDERLINE_WAVY)
 );
 
-$document->addElement((new TitleElement('Best SubTitle of the world !!!!'))
-    ->titleSize(TitleSize::H4)
-    ->textAlign(TextAlign::CENTER)
-    ->textColor(TextColor::BLUE)
+$paginationMainMenu = new PaginationModifier();
+
+$document->addElement((new TitleElement('Presentation'))
+    ->titleSize(TitleSize::H2)
+    ->textDecorationStyle(TextDecoration::UNDERLINE)
+    ->addContentModifier($paginationMainMenu)
 );
+
 
 $document->addElement((new PHPCodeElement(<<<PHP
 echo PHP_VERSION;
@@ -31,6 +35,12 @@ if ("cli" === PHP_SAPI) {
 }
 PHP))
     ->align(Align::LEFT)
+);
+
+$document->addElement((new TitleElement('Utilisation'))
+    ->titleSize(TitleSize::H2)
+    ->textDecorationStyle(TextDecoration::UNDERLINE)
+    ->addContentModifier($paginationMainMenu)
 );
 
 $document->render();

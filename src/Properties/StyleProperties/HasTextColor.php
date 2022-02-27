@@ -11,7 +11,7 @@ trait HasTextColor
 
     /**
      * @param TextColor $textColor
-     * @return HasTextColor|\App\Model\Title\TitleElement
+     * @return $this
      */
     public function textColor(TextColor $textColor = TextColor::BLACK): self
     {
