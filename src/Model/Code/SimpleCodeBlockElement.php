@@ -42,7 +42,7 @@ class SimpleCodeBlockElement extends AbstractElement
             $puceStyle = '
             <style>
                 li.li-code::before {
-                    content: counter(li);
+                    content: counter(li, decimal-leading-zero);
                     color: #666666;
                     padding: 5px;
                     border-right: #666666 solid 1px;
