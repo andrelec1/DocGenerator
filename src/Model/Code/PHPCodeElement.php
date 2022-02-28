@@ -4,11 +4,12 @@ namespace DocGenerator\Model\Code;
 
 use DocGenerator\Model\AbstractElement;
 use DocGenerator\Properties\StyleProperties\HasAlign;
+use DocGenerator\Properties\StyleProperties\HasPadding;
 
 class PHPCodeElement extends AbstractElement
 {
 
-    use HasAlign;
+    use HasAlign, HasPadding;
 
     public function __construct(
         protected string $content,
@@ -40,6 +41,7 @@ class PHPCodeElement extends AbstractElement
     {
         return [
             $this->getAlignStyle(),
+            $this->getPaddingStyle(),
         ];
     }
 }

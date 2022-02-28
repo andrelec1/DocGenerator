@@ -3,9 +3,27 @@
 namespace DocGenerator\Model\List;
 
 use DocGenerator\Model\AbstractElement;
+use DocGenerator\Properties\StyleProperties\HasAlign;
+use DocGenerator\Properties\StyleProperties\HasPadding;
+use DocGenerator\Properties\StyleProperties\HasTextColor;
+use DocGenerator\Properties\StyleProperties\HasTextDecoration;
 
 class SimpleListElement extends AbstractElement
 {
+    use HasTextColor, HasTextDecoration, HasPadding;
+
+    /**
+     * @return array
+     */
+    protected function getStyle(): array
+    {
+        return  [
+            $this->getTextColorStyle(),
+            $this->getDecorationStyle(),
+            $this->getPaddingStyle(40),
+        ];
+    }
+
     /** @var string[] */
     protected array $contents = [];
 
@@ -36,7 +54,7 @@ class SimpleListElement extends AbstractElement
      */
     protected function getOpenTag(): string
     {
-        return '<ul>';
+        return sprintf('<ul %s>', $this->getStyleProperties());
     }
 
     /**
@@ -53,19 +71,13 @@ class SimpleListElement extends AbstractElement
         return implode($contents);
     }
 
+
+
     /**
      * @return string
      */
     protected function getCloseTag(): string
     {
         return '</ul>';
-    }
-
-    /**
-     * @return array
-     */
-    protected function getStyle(): array
-    {
-        return  [];
     }
 }

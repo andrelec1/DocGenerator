@@ -3,6 +3,7 @@
 namespace DocGenerator\Model\Text;
 
 use DocGenerator\Model\AbstractElement;
+use DocGenerator\Properties\StyleProperties\HasPadding;
 use DocGenerator\Properties\StyleProperties\HasTextAlign;
 use DocGenerator\Properties\StyleProperties\HasTextColor;
 use DocGenerator\Properties\HasTitleSize;
@@ -10,7 +11,7 @@ use DocGenerator\Properties\StyleProperties\HasTextDecoration;
 
 class SimpleTextElement extends AbstractElement
 {
-    use HasTextAlign, HasTextColor, HasTextDecoration;
+    use HasTextAlign, HasTextColor, HasTextDecoration, HasPadding;
 
     /**
      * @return array
@@ -21,6 +22,7 @@ class SimpleTextElement extends AbstractElement
             $this->getTextAlignStyle(),
             $this->getTextColorStyle(),
             $this->getDecorationStyle(),
+            $this->getPaddingStyle(),
         ];
     }
 

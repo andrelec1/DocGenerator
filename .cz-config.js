@@ -15,6 +15,7 @@ module.exports = {
     { name: 'Index' },
     { name: 'Model' },
     { name: 'ContentModifier' },
+    { name: 'StyleProperties' },
   ],
 
   allowTicketNumber: false,

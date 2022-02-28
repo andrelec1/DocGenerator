@@ -81,6 +81,6 @@ abstract class AbstractElement
             return '';
         }
 
-        return sprintf('style="%s"', implode($styles));
+        return sprintf('style="%s"', implode(' ', $styles));
     }
 }

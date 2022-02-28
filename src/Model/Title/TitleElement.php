@@ -3,6 +3,7 @@
 namespace DocGenerator\Model\Title;
 
 use DocGenerator\Model\AbstractElement;
+use DocGenerator\Properties\StyleProperties\HasPadding;
 use DocGenerator\Properties\StyleProperties\HasTextAlign;
 use DocGenerator\Properties\StyleProperties\HasTextColor;
 use DocGenerator\Properties\HasTitleSize;
@@ -10,7 +11,7 @@ use DocGenerator\Properties\StyleProperties\HasTextDecoration;
 
 class TitleElement extends AbstractElement
 {
-    use HasTextAlign, HasTextColor, HasTitleSize, HasTextDecoration;
+    use HasTextAlign, HasTextColor, HasTitleSize, HasTextDecoration, HasPadding;
 
     /**
      * @return array
@@ -21,6 +22,7 @@ class TitleElement extends AbstractElement
             $this->getTextAlignStyle(),
             $this->getTextColorStyle(),
             $this->getDecorationStyle(),
+            $this->getPaddingStyle(),
         ];
     }
 

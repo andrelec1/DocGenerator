@@ -15,7 +15,7 @@ trait HasAlign
     }
 
     protected function getAlignStyle(): string {
-        return sprintf("display: flex; justify-content: %s", match ($this->align) {
+        return sprintf("display: flex; justify-content: %s;", match ($this->align) {
             Align::CENTER => "center",
             Align::RIGHT => "right",
             default => "left",
