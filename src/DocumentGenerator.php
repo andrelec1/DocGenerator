@@ -1,9 +1,9 @@
 <?php
 
-namespace App;
+namespace DocGenerator;
 
 
-use App\Model\AbstractElement;
+use DocGenerator\Model\AbstractElement;
 use ReflectionException;
 
 class DocumentGenerator

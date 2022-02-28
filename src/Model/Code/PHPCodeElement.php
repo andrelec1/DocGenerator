@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Model\Code;
+namespace DocGenerator\Model\Code;
 
-use App\Model\AbstractElement;
-use App\Properties\StyleProperties\HasAlign;
+use DocGenerator\Model\AbstractElement;
+use DocGenerator\Properties\StyleProperties\HasAlign;
 
 class PHPCodeElement extends AbstractElement
 {

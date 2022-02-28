@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Model\Text;
+namespace DocGenerator\Model\Text;
 
-use App\Model\AbstractElement;
-use App\Properties\StyleProperties\HasTextAlign;
-use App\Properties\StyleProperties\HasTextColor;
-use App\Properties\HasTitleSize;
-use App\Properties\StyleProperties\HasTextDecoration;
+use DocGenerator\Model\AbstractElement;
+use DocGenerator\Properties\StyleProperties\HasTextAlign;
+use DocGenerator\Properties\StyleProperties\HasTextColor;
+use DocGenerator\Properties\HasTitleSize;
+use DocGenerator\Properties\StyleProperties\HasTextDecoration;
 
 class SimpleTextElement extends AbstractElement
 {

@@ -1,15 +1,15 @@
 <?php
 
-use App\ContentModifier\PaginationModifier;
-use App\DocumentGenerator;
-use App\Enum\Align;
-use App\Enum\TextAlign;
-use App\Enum\TextDecoration;
-use App\Enum\TitleSize;
-use App\Model\Code\PHPCodeElement;
-use App\Model\List\SimpleListElement;
-use App\Model\Text\SimpleTextElement;
-use App\Model\Title\TitleElement;
+use DocGenerator\ContentModifier\PaginationModifier;
+use DocGenerator\DocumentGenerator;
+use DocGenerator\Enum\Align;
+use DocGenerator\Enum\TextAlign;
+use DocGenerator\Enum\TextDecoration;
+use DocGenerator\Enum\TitleSize;
+use DocGenerator\Model\Code\PHPCodeElement;
+use DocGenerator\Model\List\SimpleListElement;
+use DocGenerator\Model\Text\SimpleTextElement;
+use DocGenerator\Model\Title\TitleElement;
 
 require dirname(__DIR__).'/vendor/autoload.php';
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\ContentModifier;
+namespace DocGenerator\ContentModifier;
 
 abstract class AbstractContentModifier
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Model;
+namespace DocGenerator\Model;
 
-use App\ContentModifier\AbstractContentModifier;
+use DocGenerator\ContentModifier\AbstractContentModifier;
 
 abstract class AbstractElement
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Properties\StyleProperties;
+namespace DocGenerator\Properties\StyleProperties;
 
 
-use App\Enum\TextColor;
+use DocGenerator\Enum\TextColor;
 
 trait HasTextColor
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Properties\StyleProperties;
+namespace DocGenerator\Properties\StyleProperties;
 
-use App\Enum\Align;
+use DocGenerator\Enum\Align;
 
 trait HasAlign
 {

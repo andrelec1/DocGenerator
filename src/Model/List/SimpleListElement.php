@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Model\List;
+namespace DocGenerator\Model\List;
 
-use App\Model\AbstractElement;
+use DocGenerator\Model\AbstractElement;
 
 class SimpleListElement extends AbstractElement
 {

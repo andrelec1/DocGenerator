@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Properties;
+namespace DocGenerator\Properties;
 
 
-use App\Enum\TitleSize;
-use App\Model\Title\TitleContentModifier;
+use DocGenerator\Enum\TitleSize;
+use DocGenerator\Model\Title\TitleContentModifier;
 
 trait HasTitleSize
 {
