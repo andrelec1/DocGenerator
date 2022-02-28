@@ -7,6 +7,7 @@ use DocGenerator\Enum\TextAlign;
 use DocGenerator\Enum\TextDecoration;
 use DocGenerator\Enum\TitleSize;
 use DocGenerator\Model\Code\PHPCodeElement;
+use DocGenerator\Model\Code\SimpleCodeBlockElement;
 use DocGenerator\Model\List\SimpleListElement;
 use DocGenerator\Model\Text\SimpleTextElement;
 use DocGenerator\Model\Title\TitleElement;
@@ -50,11 +51,51 @@ $document->addElement((new TitleElement('TitleElement'))
     ->padding(2)
     ->addContentModifier($paginationModel)
 );
-$document->addElement((new SimpleTextElement('Adding \'TitleElement\' to your document.'))
+$document->addElement((new SimpleTextElement('Adding TitleElement to your document.'))
     ->padding(3)
 );
-$document->addElement((new PHPCodeElement('$document->addElement((new TitleElement(\'Doc Generator\'))'))
-    ->align(Align::LEFT)
+$document->addElement((new SimpleCodeBlockElement('
+$document->addElement((new TitleElement(\'TitleElement\'))
+    ->titleSize(TitleSize::H3)
+    ->textDecorationStyle(TextDecoration::UNDERLINE)
+);
+'))
+    ->padding(3)
+);
+
+$document->addElement((new TitleElement('SimpleTextElement'))
+    ->titleSize(TitleSize::H3)
+    ->textDecorationStyle(TextDecoration::UNDERLINE)
+    ->padding(2)
+    ->addContentModifier($paginationModel)
+);
+$document->addElement((new SimpleTextElement('Adding SimpleTextElement to your document.'))
+    ->padding(3)
+);
+$document->addElement((new SimpleCodeBlockElement('
+$document->addElement((new SimpleTextElement(
+    \'Adding SimpleTextElement to your document.\'
+)));
+'))
+    ->padding(3)
+);
+
+$document->addElement((new TitleElement('SimpleCodeBlockElement'))
+    ->titleSize(TitleSize::H3)
+    ->textDecorationStyle(TextDecoration::UNDERLINE)
+    ->padding(2)
+    ->addContentModifier($paginationModel)
+);
+$document->addElement((new SimpleTextElement('Adding SimpleCodeBlockElement to your document.'))
+    ->padding(3)
+);
+$document->addElement((new SimpleCodeBlockElement('
+$document->addElement((new SimpleCodeBlockElement(\'
+        \\\\ Your code ...
+\'))
+    ->padding(3)
+);
+'))
     ->padding(3)
 );
 
@@ -88,11 +129,10 @@ $document->addElement((new SimpleListElement())
     ->padding(3)
 );
 
-$document->addElement((new PHPCodeElement('
+$document->addElement((new SimpleCodeBlockElement('
 $document->addElement((new SimpleListElement())
     ->addStringElements([\'Element 1\', \'Element 2\']));
 '))
-    ->align(Align::LEFT)
     ->padding(3)
 );
 
@@ -109,6 +149,9 @@ $document->addElement((new TitleElement('PaginationModifier'))
     ->textDecorationStyle(TextDecoration::UNDERLINE)
     ->padding(3)
     ->addContentModifier($paginationModifier)
+);
+$document->addElement((new SimpleTextElement('Adding Number auto incremente before title, the object can take another PaginationModifier as argument for prefixing.'))
+    ->padding(4)
 );
 
 $document->render();
